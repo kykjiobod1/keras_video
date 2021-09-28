@@ -334,7 +334,7 @@ class VideoFrameGenerator(Sequence):
 
             video = self.files[i]
             classname = self._get_classname(video)
-            label = video.split(sep='videods/train/train/')[1].split(sep='.mp4')[0]
+            label = video.split(sep='/')[3].split(sep='.mp4')[0]
             label = "".join(c for c in label if c.isalnum())
 
             label = self.names_and_ctr[label]
